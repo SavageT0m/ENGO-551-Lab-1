@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %} 
+
+<h1 align="center">Search for Books</h1>
+<ul class="list-group list-group-flush" id="review">
+    {% for review in user.review %}
+    <li class="list-group-item">{{ review.data }}</li>
+    {% endfor %}
+</ul>
+
+<form method="POST">
+    <textarea name="review" id="review" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <h1></h1>
+        <button type="submit" class="btn btn-primary"> Search </button>
+    </div>
+</form>
+
+
+{% endblock %}
